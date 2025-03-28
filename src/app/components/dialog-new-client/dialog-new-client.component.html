@@ -1,0 +1,68 @@
+<div class="mainDivDialog">
+  <div mat-dialog-title class="divTitle">Create New Client</div>
+  <div mat-dialog-content>
+    <div>
+      <form [formGroup]="clientForm">
+        <div class="form-group">
+            <mat-form-field class="w-100">
+              <mat-label >name</mat-label>
+              <input matInput type="text" formControlName="name">
+              <mat-error *ngIf="clientForm.get('name')?.invalid && clientForm.get('name')?.touched">
+                This field is mandatory
+              </mat-error>
+            </mat-form-field>
+          <mat-form-field class="w-100">
+            <mat-label >Last name</mat-label>
+            <input matInput type="text" formControlName="lastName">
+            <mat-error *ngIf="clientForm.get('lastName')?.invalid && clientForm.get('lastName')?.touched">
+              This field is mandatory
+            </mat-error>
+          </mat-form-field>
+            <mat-form-field class="w-100">
+              <mat-label >phone</mat-label>
+              <input matInput type="number" formControlName="phone">
+              <mat-error *ngIf="clientForm.get('phone')?.hasError('min')">
+                This field is at least 10 characters long.
+              </mat-error>
+              <mat-error *ngIf="clientForm.get('phone')?.hasError('required')">
+                This field is mandatory
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="w-100">
+              <mat-label >email</mat-label>
+              <input matInput type="text" formControlName="email">
+              <mat-error *ngIf="clientForm.get('email')?.hasError('required')">
+                This field is mandatory
+              </mat-error>
+              <mat-error *ngIf="clientForm.get('email')?.hasError('email') && !clientForm.get('email')?.hasError('required')">
+                The email format is not valid
+              </mat-error>
+
+            </mat-form-field>
+            <mat-form-field class="w-100" (click)="picker1.open()">
+              <mat-label >startDate</mat-label>
+              <input matInput [matDatepicker]="picker1" formControlName="startDate">
+              <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+              <mat-datepicker #picker1></mat-datepicker>
+              <mat-error *ngIf="clientForm.get('startDate')?.invalid && clientForm.get('startDate')?.touched">
+                This field is mandatory
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="w-100" (click)="picker2.open()">
+              <mat-label >endDate</mat-label>
+              <input matInput [matDatepicker]="picker2" formControlName="endDate" >
+              <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+              <mat-datepicker #picker2></mat-datepicker>
+              <mat-error *ngIf="clientForm.get('endDate')?.invalid && clientForm.get('endDate')?.touched">
+                This field is mandatory
+              </mat-error>
+            </mat-form-field>
+
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="divActions" mat-dialog-actions>
+    <button mat-raised-button  (click)="createUser()">Ok</button>
+  </div>
+</div>
