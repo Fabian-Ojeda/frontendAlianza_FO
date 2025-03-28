@@ -1,0 +1,49 @@
+<app-spinner></app-spinner>
+<mat-sidenav-container class="sidenav-container">
+  <!-- Barra lateral -->
+  <mat-sidenav #sidenav [mode]="isMobile ? 'over' : 'side'" [opened]="!isMobile" [ngClass]="{'mobile-sidenav': isMobile}">
+    <div class="divLogo">
+      <img src="assets/img/logoAlianza.jpg" alt="Logo de la aplicación" class="logo">
+    </div>
+    <div class="divMenuSelected">
+    <h1>{{ menuSelected }}</h1>
+    </div>
+    <mat-nav-list class="navList">
+      <a mat-list-item [routerLink]="['/clients']" (click)="changeMenuTitle('clients'); closeSidenav(sidenav)">
+        <span class="entry">Clients
+        </span>
+      </a>
+      <a mat-list-item [routerLink]="['/clientsLookHistory']" (click)="changeMenuTitle('Client look history');
+          closeSidenav(sidenav)">
+        <span class="entry">
+          Client look history
+        </span>
+      </a>
+      <a mat-list-item [routerLink]="['/emergencyPinConf']" (click)="changeMenuTitle('Emergency PIN Configuration');
+          closeSidenav(sidenav)">
+        <span class="entry">
+          Emergency PIN Configuration
+        </span>
+      </a>
+      <a mat-list-item [routerLink]="['/emergencyPinHist']" (click)="changeMenuTitle('Emergency PIN History');
+          closeSidenav(sidenav)">
+        <span class="entry">
+          Emergency PIN History
+        </span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Contenido principal -->
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

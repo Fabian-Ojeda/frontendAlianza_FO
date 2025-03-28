@@ -1,0 +1,20 @@
+.mainDiv{
+  padding: 2%;
+}
+
+.buttonsDiv {
+  display: flex;
+  gap: 2vw;
+}
+
+.mat-mdc-raised-button{
+  background-color: #0088CC !important;
+}
+
+.searchDiv {
+  margin-top: 2vw;
+}
+
+.tableDiv {
+  /*background-color: coral;*/
+}

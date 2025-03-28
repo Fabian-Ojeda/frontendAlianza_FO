@@ -1,0 +1,52 @@
+.sidenav-container {
+  height: 100vh;
+}
+
+.content {
+  padding: 16px;
+}
+
+.active {
+  font-weight: bold;
+  color: #1976d2;
+}
+
+.mat-sidenav {
+  width: 20vw;
+
+  &.mobile-sidenav {
+    width: 100% !important;
+  }
+}
+
+.divLogo{
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+
+.logo {
+  width: 100%;
+}
+
+.divMenuSelected{
+  padding-left: 4vw;
+  padding-right: 4vw;
+  color: #0088CC;
+}
+
+.navList{
+  margin-top: 2vh;
+  padding-left: 4vw;
+}
+
+.entry{
+  white-space: normal !important;
+  font-size: 2vh;
+}
+
+.navList a[mat-list-item] {
+  display: block;
+  margin-bottom: 2vh;
+}

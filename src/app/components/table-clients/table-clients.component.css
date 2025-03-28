@@ -1,0 +1,42 @@
+.entry{
+  color: #0088CC;
+  font-size: 2vh;
+  font-weight: bold;
+}
+
+
+.mat-elevation-z8 {
+  padding: 16px;
+  overflow-x: auto;
+}
+
+.formDiv {
+  margin-top: 2vh;
+  display: flex;
+  /*background-color: #1976d2;*/
+  gap: 2vw;
+  align-items: center;
+}
+
+.btnSearch {
+  margin-bottom: 2vh;
+}
+
+.divTitleTable{
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.table-wrapper {
+  min-width: 600px; // ajusta al tamaño mínimo que ocupa la tabla
+}
+
+@media (max-width: 768px) {
+  .table-wrapper {
+    min-width: 700px;
+  }
+}
