@@ -50,3 +50,9 @@
   display: block;
   margin-bottom: 2vh;
 }
+
+@media (max-width: 768px) {
+  .entry {
+    font-size: 3vh;
+  }
+}

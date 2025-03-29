@@ -4,6 +4,8 @@ Aplicación desarrollada por Fabián Ojeda como parte de la prueba técnica para
 
 La aplicación FrontAlianzaFO permite leer, crear y buscar clientes mediante un formulario y una tabla responsiva, cumpliendo con los estilos y requerimientos de la prueba técnica. Se conecta al backend desarrollado también como parte de la misma prueba, utilizando servicios REST.
 
+También se ha implementado el punto extra de generar un archivo CSV dando click en el boton de exportar, el punto de busquqeda avanzada no se desarrolllo por falta de contextualización sobre el mismo 
+
 Además, la aplicación permite su ejecución local y su consumo desde dispositivos móviles conectados a la misma red Wi-Fi, gracias a la correcta configuración de la URL base.
 
 ## Tecnologías y versiones utilizadas
