@@ -1,7 +1,7 @@
 <div class="mainDiv">
   <div class="buttonsDiv">
     <button mat-raised-button color="primary" (click)="openDialogCreateUser()"><mat-icon>add</mat-icon>New</button>
-    <button mat-raised-button color="primary"><mat-icon>input</mat-icon>Export</button>
+    <button mat-raised-button color="primary" (click)="generateCSVFile()"><mat-icon>input</mat-icon>Export</button>
   </div>
   <div class="tableDiv">
     <app-table-clients [readData]="notifyReadData"></app-table-clients>

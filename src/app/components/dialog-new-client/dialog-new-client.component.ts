@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import {Client} from "../../interfaces/client";
-import {DatePipe} from "@angular/common";
 import {ClientsService} from "../../services/clients.service";
 import Swal from 'sweetalert2';
 import {LoaderService} from "../../services/loader.service";
@@ -85,7 +84,7 @@ export class DialogNewClientComponent implements OnInit {
           Swal.fire({
             icon: "error",
             title: "Error",
-            text: error.message,
+            text: error,
           });
           this.loaderService.hide();
         }

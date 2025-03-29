@@ -97,7 +97,7 @@ export class TableClientsComponent implements AfterViewInit{
         Swal.fire({
           icon: "error",
           title: "Error",
-          text: error.message,
+          text: error,
         });
         this.loaderService.hide();
       }
@@ -134,7 +134,7 @@ export class TableClientsComponent implements AfterViewInit{
           Swal.fire({
             icon: "error",
             title: "Error",
-            text: error.message,
+            text: error,
           });
           this.loaderService.hide();
         }
