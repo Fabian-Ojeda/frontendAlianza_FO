@@ -32,7 +32,7 @@
 }
 
 .table-wrapper {
-  min-width: 600px; // ajusta al tamaño mínimo que ocupa la tabla
+  min-width: 600px;
 }
 
 @media (max-width: 768px) {
