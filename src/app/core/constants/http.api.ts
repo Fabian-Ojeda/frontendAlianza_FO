@@ -1,6 +1,7 @@
 
 const hostname = window.location.hostname;
-const BASE_API_URL = `http://${hostname}:8081`;
+// const hostname = 'cont_ba_ali_ej1'
+const BASE_API_URL = `/api`;
 // const BASE_API_URL = 'http://localhost:8081';
 
 const BASE_BACKEND_CLIENTS = `${BASE_API_URL}/backendAlianza/clients`;
